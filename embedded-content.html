@@ -1,0 +1,21 @@
+<html><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>embedded widget</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+      <h2>this is my target</h2>
+      <p>This content should be embedded in a fancy box</p>
+      <button id="fancy-closer">Close the fancy box</button>
+    <script type="text/javascript">
+(function(window) {
+  document.querySelector('#fancy-closer').addEventListener('click', function() {
+    console.log('request to close the iFrame);
+    parent.jQuery.fancybox.getInstance().close();
+  });
+})(window);
+</script>
+</body></html>
